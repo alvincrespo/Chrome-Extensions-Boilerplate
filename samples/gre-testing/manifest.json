@@ -1,0 +1,22 @@
+{
+	"name": "GRE Prep Extension",
+	"version": "0.1",
+	"description": "Prepares you for the GRE in your browser.",
+	"icons": { 
+			"16": "images/icon16.png",
+			"48": "images/icon48.png",
+			"128": "images/icon128.png" 
+	},
+	"browser_action": {
+		"default_icon": "images/icon48.png",
+		"default_title": "GRE Prep",
+		"default_popup": "popup.html"
+	},
+	"content_security_policy": "default-src 'self' ",  
+ 	"minimum_chrome_version": "14.0.835.202",
+	"options_page": "options.html",
+	"background_page": "background.html",
+	"permissions": [
+		"tabs"
+	]
+}
