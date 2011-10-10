@@ -1,0 +1,33 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, "MS Trebuchet", sans-serif;
+}
+
+form {
+  padding: 20px;
+}
+
+legend {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+label {
+  font-size: 80%;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0px 5px 0px;
+}
+
+.radio {
+  display: inline;
+  font-weight: normal;
+}
+
+select, input {
+}
+
+input[type="radio"] {
+  margin: 0px 5px 0px 0px;
+}

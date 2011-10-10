@@ -3,17 +3,33 @@
 <head>
 	<meta charset="utf-8">
 	<title>Popup Blocker Options</title>
+	<link rel="stylesheet" href="styles/options/options.css">
 </head>
 <body>
-	<form action="/" method="get">
-		<label for="color">Favorite Color:</label>
-		<select id="color">
-		 <option value="red">red</option>
-		 <option value="green">green</option>
-		 <option value="blue">blue</option>
-		 <option value="yellow">yellow</option>
-		</select>
-		<p><input type="submit" value="submit"></p>
+	<form>
+		<fieldset>
+			<legend>GRE Prep Options</legend>
+			<label for="question-number">Number of Questions per Quiz</label>
+			<select id="question-number" name="question_number">
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="15">15</option>
+				<option value="20">20</option>
+			</select>
+			<label for="question-difficulty">Level of Difficulty</label>
+			<label class="radio"><input type="radio" name="question_difficulty" value="easy">Easy</label>
+			<label class="radio"><input type="radio" name="question_difficulty" value="hard">Hard</label>
+			<label class="radio"><input type="radio" name="question_difficulty" value="strenuous">Strenuous</label>
+			<label for="question-difficulty">Scaffolding Difficulty</label>
+			<select id="question-difficulty" name="question_scaffolding">
+				<option value="1">easy -> strenuous</option>
+				<option value="2">strenuous -> easy</option>
+			</select>
+			<label for="question-hints">Enable question hints?</label>
+			<label class="radio"><input type="radio" name="question_hints" value="on">On</label>
+			<label class="radio"><input type="radio" name="question_hints" value="off">Off</label>
+			<p><input type="submit" value="Update Options"> <input type="submit" value="Reset Options"></p>
+		</fieldset>
 	</form>
 	<script src="javascripts/options/options.js"></script>
 </body>
