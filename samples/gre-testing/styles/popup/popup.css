@@ -1,0 +1,19 @@
+body {
+  min-width: 357px;
+  overflow: hidden;
+  font-family: Arial, "MS Trebuchet", sans-serif;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul li {
+  display: block;
+  margin: 0px 0px 10px 0px;
+}
+
+ul li h2 {
+  font-size: 80%;
+}
