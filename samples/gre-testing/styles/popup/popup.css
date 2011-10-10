@@ -4,16 +4,27 @@ body {
   font-family: Arial, "MS Trebuchet", sans-serif;
 }
 
-ul {
-  margin: 0px;
-  padding: 0px;
-}
-
-ul li {
+label, select {
   display: block;
-  margin: 0px 0px 10px 0px;
 }
 
-ul li h2 {
+label {
   font-size: 80%;
+  font-weight: bold;
+}
+
+select {
+  margin: 5px 0px 20px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
 }
