@@ -1,0 +1,31 @@
+{
+	"name": "Popup Override",
+	"version": "0.1",
+	"description": "Overrides a popup window to open in new tab.",
+	"browser_action": {
+		"default_icon": "images/icon.png",
+		"default_title": "Popup Override",
+		"default_popup": "popup.html"
+	},
+	"content_security_policy": "default-src 'self' ",  
+ 	"minimum_chrome_version": "14.0.835.202",
+	"options_page": "options.html",
+	"background_page": "background.html",
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"css": [
+				"styles/inject.css"
+			],
+			"js": [
+				"javascripts/inject.js"
+			]
+		}
+	],
+	"permissions": [
+		"tabs"
+	]
+}

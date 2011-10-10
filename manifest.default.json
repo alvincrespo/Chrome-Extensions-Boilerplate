@@ -1,0 +1,44 @@
+{
+	// required
+    "name": "Popup Override",
+    "version": "0.1",
+	
+	// recommended
+    "description": "Overrides a popup window to open in new tab.",
+	"default_locale": "en",
+	"icons": { 
+			"16": "icon16.png",
+			"48": "icon48.png",
+			"128": "icon128.png" 
+	},
+	"browser_action": {
+		"default_icon": "images/icon19.png", // optional
+		"default_title": "Google Mail",      // optional; shown in tooltip
+		"default_popup": "popup.html"        // optional
+    },
+	// you can use this policy to help prevent cross-site scripting vulnerabilities in your extension.
+	// for more info: http://code.google.com/chrome/extensions/manifest.html#content_security_policy
+	"content_security_policy": "default-src 'self' ",  
+	"minimum_chrome_version": "14.0.835.202",
+	//allow users to customize the behavior of your extension
+	"options_page": "options.html",
+	//a single long-running script to manage some task or state
+	"background_page": "background.html",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "css": [
+                "styles/inject.css"
+            ],
+            "js": [
+                "javascripts/inject.js"
+            ]
+        }
+    ],
+    "permissions": [
+		"tabs"
+    ]
+}
