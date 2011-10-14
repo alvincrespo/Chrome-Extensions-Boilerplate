@@ -7,6 +7,17 @@
 </head>
 <body>
 	<script src="javascripts/json/questions.js"></script>
-	<script src="javascripts/popup/popup.js"></script>
+	<script src="javascripts/popup/Quiz.js"></script>
+	<script>
+		document.onreadystatechange = function () {
+			if (document.readyState == "complete") {
+				Quiz.init();
+				//add the backgrounds version of jQuery and window to the popup - for debugging
+				var wBG = chrome.extension.getBackgroundPage(), $BG = wBG.$;
+				//sample of triggering the console.log() in the background
+				$BG(wBG).trigger('launch.console');
+			}
+		};
+	</script>
 </body>
 </html>

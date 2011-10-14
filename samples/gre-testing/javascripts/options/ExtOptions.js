@@ -1,7 +1,7 @@
 var ExtOptions = (function () {
 	
 	return {
-		//saves options to localStorage
+
 		'saveOptions': function (e) {
 			console.log('saveOptions');
 			e.preventDefault();
@@ -27,8 +27,7 @@ var ExtOptions = (function () {
 			}
 			
 		},
-
-		//restores select box state to saved value from localStorage
+		
 		'restoreOptions': function (e) {
 			e.preventDefault();
 			e.stopPropagation();
@@ -38,22 +37,18 @@ var ExtOptions = (function () {
 					window.localStorage[prop] = ExtConfig[prop];
 				}
 			}
-			
+		},
+		
+		'checkLocalStorage': function () {
+			for (var prop in ExtConfig) {
+				if (ExtConfig.hasOwnProperty(prop)) {
+					if(typeof window.localStorage[prop] === 'undefined') {
+						window.localStorage[prop] = ExtConfig[prop];
+					}
+				}
+			}
 		}
 	};
 	
 }());
-
-document.onreadystatechange = function () {
-	if (document.readyState == "complete") {
-		
-		var form = document.getElementsByTagName('form')[0];
-			form.addEventListener('submit', ExtOptions.saveOptions);
-			form.addEventListener('reset', ExtOptions.restoreOptions);
-		
-		//todo: check if the local storage is different, if so assign the local storage values
-		
-	}
-};
-
 

@@ -33,5 +33,17 @@
 	</form>
 	<script src="javascripts/options/ExtConfig.js"></script>
 	<script src="javascripts/options/ExtOptions.js"></script>
+	<script>
+		document.onreadystatechange = function () {
+			if (document.readyState == "complete") {
+				
+				ExtOptions.checkLocalStorage();
+				
+				var form = document.getElementsByTagName('form')[0];
+					form.addEventListener('submit', ExtOptions.saveOptions);
+					form.addEventListener('reset', ExtOptions.restoreOptions);
+			}
+		};
+	</script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 		"default_title": "GRE Prep",
 		"default_popup": "popup.html"
 	},
-	"content_security_policy": "default-src 'self' ",  
+	"content_security_policy": "default-src 'self' 'unsafe-inline'",  
  	"minimum_chrome_version": "14.0.835.202",
 	"options_page": "options.html",
 	"background_page": "background.html",
