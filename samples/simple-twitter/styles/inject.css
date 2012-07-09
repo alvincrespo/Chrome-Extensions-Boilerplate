@@ -1,0 +1,31 @@
+.dashboard {
+	width: 240px;
+}
+
+.tweet-box .twitter-anywhere-tweet-box-editor {
+	width: 90% !important;
+}
+
+.component[data-component-term="trends"] {
+	display: none !important;
+}
+
+.component[data-component-term="user_recommendations"] .js-recommended-followers > div {
+    display: none;
+}
+
+.component[data-component-term="user_recommendations"] .js-recommended-followers > div:first-child {
+    display: block;
+}
+
+.content-main {
+	width: 580px;
+}
+
+.stream-item .content, .permalink-tweet .content {
+	margin-left: 0;
+}
+
+.stream-item-header .avatar, .permalink-header .avatar {
+	display: none;
+}

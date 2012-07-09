@@ -1,0 +1,38 @@
+{
+	// required
+    "name": "Twitter Override",
+    "version": "0.1",
+	
+	// recommended
+    "description": "Modifies the UI on Twitter",
+    // Commented out since it is only for English
+    // http://code.google.com/chrome/extensions/manifest.html#default_locale
+	// "default_locale": "en",
+	"icons": { 
+			"16": "images/icon-16.jpg",
+			"48": "images/icon-48.jpg",
+			"128": "images/icon-128.jpg" 
+	},
+	"browser_action": {
+		"default_icon": "images/icon-48.jpg",
+		"default_title": "Twitter UI Modifier",
+		"default_popup": "popup.html"
+    },
+	// you can use this policy to help prevent cross-site scripting vulnerabilities in your extension.
+	// for more info: http://code.google.com/chrome/extensions/manifest.html#content_security_policy
+	"content_security_policy": "default-src 'self' ",
+	//http://code.google.com/chrome/extensions/manifest.html#minimum_chrome_version
+	"minimum_chrome_version": "20.0.1132.47",
+	//http://code.google.com/chrome/extensions/options.html
+	"options_page": "options.html",
+	//a single long-running script to manage some task or state
+	"background_page": "background.html",
+	//http://code.google.com/chrome/extensions/content_scripts.html
+    "content_scripts": [
+		{
+			"matches": [ "*://twitter.com/*" ],
+			"js": [ "javascripts/inject.js" ],
+			"run_at": "document_end"
+		}
+    ]
+}
